@@ -1,0 +1,139 @@
+:root{
+    --veryDarkGrayishBlue:hsl(217, 19%, 35%);
+    --desaturatedDarkBlue:hsl(214, 17%, 51%);
+    --grayishBlue:hsl(212, 23%, 69%);
+    --lightGrayishBlue:hsl(210, 46%, 95%);
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDF2F8;
+}
+.card{
+    max-width: 800px;
+    border: none;
+    position: relative;
+}
+h1{
+    font-size: 24px;
+}
+h1,h2{
+    color:var(--veryDarkGrayishBlue)!important;
+    font-weight: 600;
+}
+p{
+    color: var(--desaturatedDarkBlue)!important;
+}
+.img-fluid{
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+.card-body{
+    padding: 2rem;
+    padding-bottom: 1rem;
+
+}
+.card-text{
+    font-size: 15px;
+}
+.card-footer{
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+}
+.card-footer h2{
+    font-size: 14px;
+    margin: 0;
+}
+.card-footer p{
+    margin: 0;
+    font-size: 14px;
+}
+.card-footer img.user{
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.footer{
+    background-color: var(--grayishBlue);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.hoovered{
+    position: absolute;
+    background-color: var(--veryDarkGrayishBlue);
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    bottom: 84px;
+    right: -60px;
+    cursor: pointer;
+}
+.hoovered::after{
+    content: "";
+    background-color:var(--veryDarkGrayishBlue);
+    width: 20px;
+    height: 20px;
+    bottom: -8px;
+    left: 48%;
+    transform: rotate(45deg);
+    z-index: 0;
+    position: absolute;
+
+}
+.hoovered span{
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: var(--grayishBlue);
+    
+}
+.hoovered i{
+    color: white;
+    margin-left: 0.8rem;
+    font-size: 20px;
+}
+@media(max-width:576px){
+    body{
+        padding: 1rem;
+    }
+    h1{
+        font-size: 18px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+    .hoovered{
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 0 0 15px 15px;
+    }
+    .hoovered::after{
+        display: none;
+    }
+    .hoovered i{
+        font-size: 25px;
+        margin-left: 1.5rem;
+    }
+    .footer{
+        z-index: 2;
+    }
+    .img-fluid{
+        border-radius:8px 8px 0 0!important;
+    }
+}
